@@ -1,13 +1,50 @@
 @import "~normalize.css";
-
 @import "_variables";
-@import "modules/hello.scss";
+@import "modules/stylereset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Oswald&display=swap');
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.body {
   min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.main {
+  color: var(--text-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    ". . moment"
+    ". . ."
+    ". header ."
+    ". darkmode ."
+    ". article ."
+    ". . .";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 10% 5% 10% 5% 1fr 5%;
+  &__moment {
+    grid-area: moment;
+  }
+  &__header {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    grid-area: header;
+    &-h1 {
+    }
+  }
+  &__darkmode {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    width: 15%;
+    margin: 0 auto;
+    grid-area: darkmode;
+    border: 3px solid #F5CB5C;
+    border-radius: 10px;
+  }
+  &__article {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 16px;
+    text-align: justify;
+    font-size: 20px;
+    grid-area: article;
+  }
 }
