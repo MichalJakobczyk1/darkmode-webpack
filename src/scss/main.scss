@@ -23,6 +23,10 @@
   grid-template-rows: 10% 5% 10% 5% 1fr 5%;
   &__moment {
     grid-area: moment;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
   }
   &__header {
     font-family: 'Cinzel', serif;
@@ -37,7 +41,7 @@
     width: 15%;
     margin: 0 auto;
     grid-area: darkmode;
-    border: 3px solid #F5CB5C;
+    border: var(--border);
     border-radius: 10px;
   }
   &__article {
